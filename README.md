@@ -25,4 +25,5 @@ To run your tests
 ## Table of Contents
 
 Code Challenge 1: [Reverse Array](python/docs/array-reverse/README.md)
+Code Challenge 2: [Array Shift Insert](python/docs/array_shift_insert/README.md)
 
