@@ -6,7 +6,7 @@ class LinkedList:
 
     def __init__(self):
         # initialization here, instance attributes get defined in here
-        self.head = None # Initialize the Linked List with a Head Node with the Value of None
+        self.head = None  # Initialize the Linked List with a Head Node with the Value of None
 
     def insert(self, value):
         # Create a new Node calling the Node class
@@ -23,7 +23,7 @@ class LinkedList:
 
     def includes(self, value):
         # Use this method to check if a value is currently within the Linked List
-        current = self.head # Start at the head and work your way through the Linked List
+        current = self.head  # Start at the head and work your way through the Linked List
 
         # Use this while loop to step through each of the nodes within the link list
         # While stepping through the linked list check if the value is present and return True if so.
@@ -41,7 +41,7 @@ class Node:
     """
     def __init__(self, value, next_node=None):
         self.value = value
-        self.next = next_node
+        self.next_node = next_node
 
 
 class TargetError:
