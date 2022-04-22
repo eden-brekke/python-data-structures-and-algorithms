@@ -94,3 +94,8 @@ and creating a next link to the previous head.
 ## API
 <!-- Description of each method publicly available to your Linked List -->
 No APIs
+
+## References
+We ran through this lab during lecture with JB so this code is very similar to JBs code!
+I wrote it out myself to demonstrate understanding and added comments
+Comments are meant to show that I understand what each line/method within the code is doing.
