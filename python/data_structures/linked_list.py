@@ -18,7 +18,7 @@ class LinkedList:
         current = self.head # Start at the head and work your way through the Linked List
         while current:
             response += f"{{ {str(current.value)} }} -> "
-            current = current.next_node
+            current = current.next
         return response + "NULL"
 
     def includes(self, value):
@@ -31,7 +31,7 @@ class LinkedList:
         while current:
             if current.value == value:
                 return True
-            current = current.next_node
+            current = current.next
         return False
 
 
@@ -39,9 +39,9 @@ class Node:
     """
     Class to create a New Node
     """
-    def __init__(self, value, next_node=None):
+    def __init__(self, value, next=None):
         self.value = value
-        self.next_node = next_node
+        self.next = next
 
 
 class TargetError:
