@@ -74,3 +74,23 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 - **Run every possible test** - `pytest`
 - **Run filtered tests** - `pytest -k some_filter_text`
 - **Run in watch mode** - `ptw` or `pytest-watch`
+
+
+# Singly Linked List
+<!-- Short summary or background information -->
+Our first introduction to the linked list implementation.
+
+## Challenge
+<!-- Description of the challenge -->
+Create a Node class. Create a Linked List class. Allow for insertion into the Linked List
+Then allow us to traverse and check in values are present within the linked list.
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+This will be an O(1) because we are adding to the front of the list which means
+no matter how many items are within the linked list it will be the same step to add one to the head
+and creating a next link to the previous head.
+
+## API
+<!-- Description of each method publicly available to your Linked List -->
+No APIs
