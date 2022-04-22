@@ -6,7 +6,7 @@ class LinkedList:
 
     def __init__(self):
         # initialization here, instance attributes get defined in here
-        self.head = None
+        self.head = None # Initialize the Linked List with a Head Node with the Value of None
 
     def insert(self, value):
         # Create a new Node calling the Node class
@@ -15,7 +15,7 @@ class LinkedList:
     def __str__(self):
         # Take in a response and return a string of the current nodes while traversing
         response = ""
-        current = self.head
+        current = self.head # Start at the head and work your way through the Linked List
         while current:
             response += f"{{ {str(current.value)} }} -> "
             current = current.next_node
@@ -23,7 +23,7 @@ class LinkedList:
 
     def includes(self, value):
         # Use this method to check if a value is currently within the Linked List
-        current = self.head
+        current = self.head # Start at the head and work your way through the Linked List
 
         # Use this while loop to step through each of the nodes within the link list
         # While stepping through the linked list check if the value is present and return True if so.
