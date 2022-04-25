@@ -103,5 +103,6 @@ Comments are meant to show that I understand what each line/method within the co
 I also used [This Handy Link](https://blog.finxter.com/how-to-format-a-string-that-contains-curly-braces-in-python/)
 for the dunder string method because the output asks for the { } in the output of each nodes value
 Found that the double {{ and }} will escape and keep the inner ones I've typed!
+
 How Neat is that? [Neat Reference](https://www.youtube.com/watch?v=Hm3JodBR-vs&t=29s)
 All jokes aside Python is pretty dang neat.
