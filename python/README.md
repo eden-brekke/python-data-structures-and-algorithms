@@ -130,3 +130,4 @@ I think these are a BigO of a O(N) because the time/space should scale linearly 
   * I.E The end of the list
 * If the method for insert before is used the method will traverse through the linked list checking the "next" value of each node then insert there
 * If the method for insert before is used the method will traverse through the linked list checking each value for the correct node and insert there
+[Code Solution](data_structures/linked_list.py)
