@@ -76,26 +76,26 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 - **Run in watch mode** - `ptw` or `pytest-watch`
 
 
-# Singly Linked List
+## Singly Linked List
 <!-- Short summary or background information -->
 Our first introduction to the linked list implementation.
 
-## Challenge
+### Challenge
 <!-- Description of the challenge -->
 Create a Node class. Create a Linked List class. Allow for insertion into the Linked List
 Then allow us to traverse and check in values are present within the linked list.
 
-## Approach & Efficiency
+### Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 This will be an O(1) because we are adding to the front of the list which means
 no matter how many items are within the linked list it will be the same step to add one to the head
 and creating a next link to the previous head.
 
-## API
+### API
 <!-- Description of each method publicly available to your Linked List -->
-No APIs
+Methods are Include and insert into a linked list
 
-## References
+### References
 We ran through this lab during lecture with JB so this code is very similar to JBs code!
 I wrote it out myself to demonstrate understanding and added comments
 Comments are meant to show that I understand what each line/method within the code is doing.
@@ -103,5 +103,31 @@ Comments are meant to show that I understand what each line/method within the co
 I also used [This Handy Link](https://blog.finxter.com/how-to-format-a-string-that-contains-curly-braces-in-python/)
 for the dunder string method because the output asks for the { } in the output of each nodes value
 Found that the double {{ and }} will escape and keep the inner ones I've typed!
+
 How Neat is that? [Neat Reference](https://www.youtube.com/watch?v=Hm3JodBR-vs&t=29s)
 All jokes aside Python is pretty dang neat.
+
+
+## Linked List Insertions
+### Challenge Summary
+Now that we have a linked list that allows for searching of includes and insertions.
+We now want to append, insert before values and insert after values
+
+### Whiteboard Process
+<!-- Embedded whiteboard image -->
+![Whiteboard](assets/CodeChallenge06.png)
+
+### Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Create a method for append: add a new node with a given value to the end of a list
+Create a method for insert before: which adds a new node with the given value before the node with a given value
+Create a method for insert after: which adds a new node with the given value after the node with the given value
+I think these are a BigO of a O(N) because the time/space should scale linearly with the amount of nodes within the linked list.
+
+### Solution
+<!-- Show how to run your code, and examples of it in action -->
+* If Method for append is used the method will traverse through the linked list and append where the next value is "None"
+  * I.E The end of the list
+* If the method for insert before is used the method will traverse through the linked list checking the "next" value of each node then insert there
+* If the method for insert before is used the method will traverse through the linked list checking each value for the correct node and insert there
+[Code Solution](data_structures/linked_list.py)
