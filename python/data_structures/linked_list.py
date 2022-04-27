@@ -82,6 +82,38 @@ class LinkedList:
             else:
                 current = current.next
 
+    def find_length_of_linked_list(self):
+        """
+        This is a helper method that will count all the nodes within a list as it traverses
+        Then it will return the count
+        """
+        count = 0
+        current = self.head
+
+        while current:
+            count += 1
+            current = current.next
+        return count
+
+    def kth_from_end(self, k):
+        """
+        This method will take in a number as an argument (k)
+        Then the method will return the node's value that is the k'th index from the end of the list
+        """
+        if k >= 0:
+            current = self.head
+            length = self.find_length_of_linked_list()
+            target = length - k
+
+            if target < 1:
+                raise TargetError
+            for i in range(1, target):
+                current = current.next
+            return current.value
+        else:
+            raise TargetError
+
+
 
 class Node:
     """
