@@ -28,3 +28,5 @@ Found that the double {{ and }} will escape and keep the inner ones I've typed!
 
 How Neat is that? [Neat Reference](https://www.youtube.com/watch?v=Hm3JodBR-vs&t=29s)
 All jokes aside Python is pretty dang neat.
+
+[Code Solution](../../data_structures/linked_list.py)

@@ -76,7 +76,11 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 - **Run in watch mode** - `ptw` or `pytest-watch`
 
 ## Table of Contents:
-[Singly Linked List](docs/linked_list_singly)
-[Insertion Linked List](docs/linked_list_insertions)
-[Kth from the end Linked List](docs/linked_list_kth)
-[Linked List Zip](docs/linked_list_zip)
+* [Singly Linked List README](docs/linked_list_singly)
+  * [Code Solution](data_structures/linked_list.py)
+* [Insertion Linked List README](docs/linked_list_insertions)
+  * [Code Solution](data_structures/linked_list.py)
+* [Kth from the end Linked List README](docs/linked_list_kth)
+  * [Code Solution](data_structures/linked_list.py)
+* [Linked List Zip README](docs/linked_list_zip)
+  * [Code Solution](data_structures/linked_list.py)
