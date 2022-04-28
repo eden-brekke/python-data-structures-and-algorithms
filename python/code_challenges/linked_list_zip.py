@@ -19,4 +19,3 @@ def zip_lists(a, b):
             return a
 
     return a
-
