@@ -21,4 +21,6 @@ Method: Dequeue takes first in object out of the queue and returns it  .
 Input object instance of Cat or Dog in the enqueue
 input string of cat or dog to dequeue the first in object of the queue!
 Simple and clean
+Used a method we haven't talked about:
+[Reference to method isinstance](https://note.nkmk.me/en/python-type-isinstance/#:~:text=In%20Python%2C%20to%20get%20the,type()%20and%20isinstance()%20.)
 [Code Solution](../../code_challenges/stack_queue_animal_shelter.py)
