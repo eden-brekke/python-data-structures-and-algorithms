@@ -23,4 +23,5 @@ BigO Space: O(1) Since the list should only have 3 at most opening bracket types
 * if the input string contains a closing bracket
 * then pop the correct opening bracket from the stack (if it exists)
 * Check the status of the stack to determine the validity of the string
+
 [Code Solution](../../code_challenges/stack_queue_brackets.py)
