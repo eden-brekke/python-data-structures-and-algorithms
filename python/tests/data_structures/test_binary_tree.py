@@ -6,26 +6,36 @@ def test_exists():
     assert BinaryTree
 
 
-@pytest.mark.skip("TODO")
+def test__root_exists():
+    tree = BinaryTree()
+    assert tree.root is None
+
+
+def test_node_exists():
+    assert Node
+
+
+def test_create_node():
+    node = Node("apple")
+    assert node
+    assert node.left is None
+    assert node.right is None
+
+
 def test_pre_order(tree):
-    actual = []
-    tree.pre_order(actual.append)
+    actual = tree.pre_order()
     expected = ["a", "b", "d", "e", "c", "f", "g"]
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
 def test_in_order(tree):
-    actual = []
-    tree.in_order(actual.append)
+    actual = tree.in_order()
     expected = ["d", "b", "e", "a", "f", "c", "g"]
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
 def test_post_order(tree):
-    actual = []
-    tree.post_order(actual.append)
+    actual = tree.post_order()
     expected = ["d", "e", "b", "f", "g", "c", "a"]
     assert actual == expected
 
