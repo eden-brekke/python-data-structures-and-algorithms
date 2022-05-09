@@ -9,6 +9,22 @@ class BinaryTree:
     def __init__(self):
         self.root = None
 
+    def find_maximum_value(self):
+        if self.root is None:
+            return None
+
+        def walk(root, max):
+            if root is None:
+                return max
+            if root.value > max:
+                max = root.value
+            max = walk(root.left, max)
+            max = walk(root.right, max)
+            return max
+
+        find_max = walk(self.root, 0)
+        return find_max
+
     def pre_order(self):
         def walk(root, values):
             if not root:
