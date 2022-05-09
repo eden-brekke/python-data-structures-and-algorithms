@@ -22,8 +22,8 @@ class BinaryTree:
             max = walk(root.right, max)
             return max
 
-        find_max = walk(self.root, 0)
-        return find_max
+        result = walk(self.root, 0)
+        return result
 
     def pre_order(self):
         def walk(root, values):
