@@ -14,12 +14,12 @@ class Queue:
 
     def enqueue(self, value):
         # method body here
-        if self.rear:
+        if not self.front:
+            self.front = Node(value)
+            self.rear = self.front
+        else:
             self.rear.next = Node(value)
             self.rear = self.rear.next
-        else:
-            self.rear = Node(value)
-            self.front = self.rear
 
     def dequeue(self):
         if self.front is None:
