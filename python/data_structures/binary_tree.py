@@ -1,3 +1,5 @@
+from data_structures.queue import Queue
+
 class Node:
     def __init__(self, value):
         self.value = value
@@ -6,8 +8,11 @@ class Node:
 
 
 class BinaryTree:
-    def __init__(self):
-        self.root = None
+    def __init__(self, root=None, values=None):
+        self.root = root
+        if values:
+            for value in values:
+                self.add(value)
 
     def find_maximum_value(self):
         if self.root is None:
@@ -49,7 +54,6 @@ class BinaryTree:
         return ordered_values
 
     def post_order(self):
-        # method body here
         def walk(root, values):
             if not root:
                 return
@@ -59,3 +63,29 @@ class BinaryTree:
         ordered_values = []
         walk(self.root, ordered_values)
         return ordered_values
+
+    def add(self, value):
+
+        node = Node(value)
+
+        if not self.root:
+            self.root = node
+            return
+
+        breadth = Queue()
+
+        breadth.enqueue(self.root)
+
+        while not breadth.is_empty():
+            front = breadth.dequeue()
+            if not front.left:
+                front.left = node
+                return
+            else:
+                breadth.enqueue(front.left)
+
+            if not front.right:
+                front.right = node
+                return
+            else:
+                breadth.enqueue(front.right)
