@@ -14,7 +14,6 @@ def test_none_tree():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
 def test_rootless_tree():
     tree = BinaryTree()
     expected = []
