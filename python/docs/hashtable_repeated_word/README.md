@@ -3,6 +3,9 @@
 ### Challenge Summary
 Create a function called repeated word that finds the first word to occur more than once in a string.
 
+### Collaboration
+Got help with this from Roger. :) 
+
 ### Whiteboard Process
 <!-- Embedded whiteboard image -->
 ![Whiteboard](Codechallenge31.png)
@@ -20,5 +23,5 @@ Time/Space: O(N) where N is the number of words in the string
 * Check each word: if in set?
   * no? Add to set!
   * yes? That's a repeat! return word!
-  
+
 [Code Solution](../../code_challenges/hashtable_repeated_word.py)
