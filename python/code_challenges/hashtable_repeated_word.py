@@ -1,5 +1,13 @@
-from data_structures.hashtable import Hashtable
+import re
 
+def first_repeated_word(word):
+    regex = re.compile('[^a-zA-Z ]')
+    stripped_words = regex.sub('', word)
+    words = stripped_words.lower().split()
 
-def first_repeated_word():
-    pass
+    dictionary = set()
+    for word in words:
+        if word in dictionary:
+            return word
+        else:
+            dictionary.add(word)
