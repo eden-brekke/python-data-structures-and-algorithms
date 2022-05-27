@@ -18,7 +18,6 @@ class Hashtable:
         elif type(key) is int:
             hash_key = key
         index = (hash_key * 599) % self.size
-        print(index)
         return index
 
     def string_to_int_helper(self, string):
@@ -41,10 +40,8 @@ class Hashtable:
         bucket = self.buckets[hash_index]
 
         if bucket is None:
-            bucket = LinkedList()
-            self.buckets[hash_index] = bucket
-
-        bucket.append((key, value))
+            self.buckets[hash_index] = LinkedList()
+        self.buckets[hash_index].insert((key,value))
 
 
     def get(self, key):
@@ -77,12 +74,13 @@ class Hashtable:
         '''
         Returns: Collection of keys
         '''
-        bucket = self.buckets[0]
-        keys = {}
-        current = bucket.head
-        while current:
-            pair = current.value
-            current_key = pair[0]
-            keys.add(current_key)
-            current = current.next
-        return keys
+        key_collection = set()
+        for bucket in self.buckets:
+            if bucket is not None:
+                current = bucket.head
+                while current:
+                    pair = current.value
+                    current_key = pair[0]
+                    key_collection.add(current_key)
+                    current = current.next
+        return key_collection

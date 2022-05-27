@@ -46,12 +46,42 @@ def test_collisions():
 def test_contains():
     ht = Hashtable()
     ht.set('fruit', 'apple')
-    ht.contains('fruit')
-    assert True
+    expected = True
+    actual = ht.contains('fruit')
+    assert actual == expected
+
+def test_not_contains():
+    ht = Hashtable()
+    ht.set('cat', 'Josie')
+    expected = False
+    actual = ht.contains('act')
+    assert actual == expected
 
 def test_keys():
     ht = Hashtable()
     ht.set('cat','Josie')
     ht.set('act','A Contemporary Theater')
     ht.set('tac','Taco Tuesday')
-    assert ht.keys == ['cat','act','tac']
+    actual = ht.keys()
+    expected = {'cat','act','tac'}
+    assert actual == expected
+
+def test_not_in_keys():
+    ht = Hashtable()
+    ht.set('cat','Josie')
+    ht.set('act','A Contemporary Theater')
+    ht.set('gort','Taco Tuesday')
+    actual = ht.keys()
+    expected = {'cat','act','tac'}
+    assert actual != expected
+
+def test_set_update():
+    ht = Hashtable()
+    ht.set('cat','Josie')
+    ht.set('cat', 'Pumpkin')
+    actual = ht.get('cat')
+    getkey = ht.keys()
+    keys = {'cat'}
+    expected = 'Pumpkin'
+    assert actual == expected
+
