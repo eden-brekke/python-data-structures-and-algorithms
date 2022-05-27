@@ -80,8 +80,6 @@ def test_set_update():
     ht.set('cat','Josie')
     ht.set('cat', 'Pumpkin')
     actual = ht.get('cat')
-    getkey = ht.keys()
-    keys = {'cat'}
     expected = 'Pumpkin'
     assert actual == expected
 
