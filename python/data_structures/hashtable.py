@@ -7,6 +7,22 @@ class Hashtable:
         # initialization here
         pass
 
-    def some_method(self):
+    def hash(self):
+        # method body here
+        pass
+
+    def set(self):
+        # method body here
+        pass
+
+    def get(self):
+        # method body here
+        pass
+
+    def contains(self):
+        # method body here
+        pass
+
+    def keys(self):
         # method body here
         pass
