@@ -60,7 +60,7 @@ def test_not_contains():
 
 def test_contains_zero():
     ht = Hashtable()
-    ht.set(0, 'zero')
+    ht.set(0, 0)
     expected = True
     actual = ht.contains(0)
     assert actual == expected

@@ -68,12 +68,24 @@ class Hashtable:
         Arguments: key
         Returns: Boolean, indicating if the key exists in the table already.
         '''
-        if self.get(key) is not None or self.get(key) != 0:
-            return bool(self.get(key))
-        elif self.get(key) == 0:
-            return True
-        elif self.get(key) is None:
+        # if self.get(key) is not None or self.get(key) != 0:
+        #     return bool(self.get(key))
+        # elif self.get(key) == 0:
+        #     return True
+        # elif self.get(key) is None:
+        #     return False
+        hash_index = self.hash(key)
+        bucket = self.buckets[hash_index]
+
+        if bucket is None:
             return False
+        current = bucket.head
+        while current:
+            if current.value[0] == key:
+                return True
+            current = current.next
+        return False
+
 
     def keys(self):
         '''
