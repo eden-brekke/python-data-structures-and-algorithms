@@ -68,7 +68,12 @@ class Hashtable:
         Arguments: key
         Returns: Boolean, indicating if the key exists in the table already.
         '''
-        return bool(self.get(key))
+        if self.get(key) is not None or self.get(key) != 0:
+            return bool(self.get(key))
+        elif self.get(key) == 0:
+            return True
+        elif self.get(key) is None:
+            return False
 
     def keys(self):
         '''
