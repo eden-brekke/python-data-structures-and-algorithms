@@ -14,13 +14,13 @@ class Hashtable:
         Returns: Index in the collection for that key
         '''
         if type(key) is str:
-            hash_key = self.string_to_int_helper(key)
+            hash_key = self.string_converter(key)
         elif type(key) is int:
             hash_key = key
         index = (hash_key * 599) % self.size
         return index
 
-    def string_to_int_helper(self, string):
+    def string_converter(self, string):
         '''
         Argument: String
         Returns: String converted to INT via ASCII values
